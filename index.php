@@ -82,7 +82,7 @@
       globalVar();
     ?> 
   <br><br>
-  <h2>Constants</h2>
+<h2>Constants</h2>
   <?php
    define("MINSIZE", 50);
    
@@ -92,8 +92,8 @@
 ?>
 <br><br>
 <h2>Decision Making</h2>
-      <h3>If...Else</h3>
-        <?php
+  <h3>If...Else</h3>
+    <?php
           // An if...else statement to test the date and then wish a happy weekend
           $todayDate = date("D"); //date is an inbuilt function that must have a variable D parameter to hold the day to be assigned.
             if ($todayDate == "Sat")
@@ -153,9 +153,82 @@
                 echo "Kwani leo ni lini??? 😫";
               }
           ?>
-        
-    
-    
+      
+      
+      
+      <br><br>
+<h2>Loops</h2>
+  <h3>For Loop</h3>
+    <?php
+      $num5 = 0;
+      $num6 = 0;
+        for ($i = 0; $i < 5; $i++) {
+          //Increment the values of num5 and num6, such that, 
+          // num5 = 0, then 0 + 10 = 10
+          // num5 = 10, then 10 + 10 = 20
+          $num5 += 10;
+          $num6 += 5;
+        }
+        echo "The values after the loop are num5 = $num5 and num6 = $num6";
+      echo "<br><br>";
+      // Another for loop
+      $num7 = 0;
+      $num8 = 50;
+        for ($i = 0; $i <= 10; $i++) {
+          $num7 ++;
+          $num8 --;
+        }
+        echo "Num7 stopped at $num7 and num8 stopped at $num8";  
+    ?>  
+  <h3>While Loop</h3>    
+    <?php
+      $num9 = 0;
+      $num10 = 50;
+        while ($i < 10) {
+          $num9 ++;
+          $num10 --;
+        }
+        echo "The while loop stopped at num9 = $num9 and num10 = $num10";
+        echo "<br><br>";
+    ?>
+  <h3>Do while Loop</h3>  
+    <?php
+      $num11 = 0;
+        do {
+          $num11 ++;
+        }
+        while ($num11 < 10 ); 
+          echo "Loop stops at num11 = $num11";    
+    ?>
+  <h3>For Each Loop</h3>
+    <?php
+      $arrLoop = array("Denzel", "Murathi", "Gitonga");
+      // The elements will be assigned to the variable $arrElements below
+        foreach ($arrLoop as $arrElements) {
+          // To print the elements on separate lines
+          echo "The array contains $arrElements <br>";
+        }
+    ?>
+    <h4>Break Statement</h4>
+      <?php
+        $num12 = 0; 
+          while ($num12 < 5) {
+            $num12 ++;
+              if($num12 == 3) break; //stops the loop
+          }
+          echo "The loop was supposed to go on until 5, but stopped at $num12";
+      ?>
+    <h4>Continue Statement</h4>
+      <!-- To skip a particular value met in the loop -->
+      <?php
+        $arrCont = array("Denzel", "Murathi", "Gitonga");
+          foreach ($arrCont as $cont) {
+            if ($cont == "Murathi") continue;
+            echo "The array contains $cont <br>";
+          }
+      ?>
 
+    
+    
 </body>
 </html>
