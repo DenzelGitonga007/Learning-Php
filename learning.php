@@ -294,6 +294,19 @@
         }
         multiArr();
       ?>
+  <h2>Strings</h2>
+    <h2>Single quoted and double quoted strings</h2>
+      <!-- A single quoted string interprets data literally, while a double quoted string can read variables values -->
+      <?php
+        $nameTest = "Denzel";
+        $singleString = 'My name is $nameTest';
+        $doubleString = "My name is $nameTest";
+        
+          echo "$singleString";
+          echo "<br>";
+          echo "$doubleString";
+      ?>
+
 
 </body>
 </html>
